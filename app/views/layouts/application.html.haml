@@ -7,4 +7,16 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    = yield
+    %header.navbar.navbar-fixed-top.navbar-inverse
+      .container
+        = link_to "sample app", "#", id: "logo"
+        %nav
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              = link_to "Home", "#"
+            %li
+              = link_to "Help", "#"
+            %li
+              = link_to "Log in", "#"
+    .container
+      = yield
